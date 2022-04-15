@@ -12,6 +12,13 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     log: true,
   });
 
+  await deploy('KingsNFT', {
+    // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
+    from: deployer,
+    // args: ["Hello"],
+    log: true,
+  });
+
   /*
     // Getting a previously deployed contract
     const YourContract = await ethers.getContract("YourContract", deployer);
@@ -21,7 +28,7 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   */
 };
 export default func;
-func.tags = ['YourContract'];
+func.tags = ['YourContract', 'KingsNFT'];
 
 /*
 Tenderly verification
